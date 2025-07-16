@@ -4,6 +4,7 @@ import {LoadingScreen} from "./compontents/LoadingScreen";
 import {Navbar} from "./compontents/Navbar";
 import {MobileMenu} from "./compontents/MobileMenu";
 import {Home} from "./compontents/sections/Home";
+import {About} from "./compontents/sections/About";
 import "./index.css"
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
       <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
 
       <Home />
+
+      <About />
+
 
 
     </div>
