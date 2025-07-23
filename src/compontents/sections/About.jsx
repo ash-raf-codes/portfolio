@@ -69,9 +69,25 @@ export const About = () => {
                 
                  
                  <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-                                <h3 className="text-xl font-bold mb-4">
-                                    Work Expereince
-                                </h3>
+                                <h3 className="text-xl font-bold mb-4">Work Expereince</h3>
+                                <div className="space-y-4 text-gray-300">
+                                    <h4 className="font-semibold"> Software Development Engineer in Test (SDET) at BC Pension - Sep 2023 to Apr 2024</h4>
+                                    <p>
+                                        Experienced SDET with a focus on scalable test automation using Python and PL/SQL. 
+                                        Improved UI and API testing efficiency through CI/CD integration, cloud-native frameworks, and contract-driven practices. 
+                                        Achieved a 20% reduction in regression time and 50% faster test cycles using low-code, ML-enhanced tools. 
+                                        Strong collaborator in agile teams with a data-driven approach to performance optimization.
+                                    </p>
+                                </div>
+
+                                <div className="space-y-4 text-gray-300 mt-4">
+                                    <h4 className="font-semibold">Business Systems Analyst at BC Pension - Jan 2023 to Aug 2024</h4>
+                                    <p>
+                                        Skilled in business process analysis and system implementation, with experience creating enterprise-level BPMs to improve requirements clarity by 30%. 
+                                        Led multi-environment CRM deployments and data migrations aligned with business needs. 
+                                        Coordinated UAT for service releases and developed test strategy frameworks, reducing development time by 25% through test-driven and agile practices.
+                                    </p>
+                                </div>
                         </div>
                 
             </div>
