@@ -5,6 +5,7 @@ import {Navbar} from "./compontents/Navbar";
 import {MobileMenu} from "./compontents/MobileMenu";
 import {Home} from "./compontents/sections/Home";
 import {About} from "./compontents/sections/About";
+import {Projects} from "./compontents/sections/Projects";
 import "./index.css"
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
       <Home />
 
       <About />
+
+      <Projects />
 
 
 
