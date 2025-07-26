@@ -7,6 +7,7 @@ import {Home} from "./compontents/sections/Home";
 import {About} from "./compontents/sections/About";
 import {Projects} from "./compontents/sections/Projects";
 import "./index.css"
+import { Contact } from './compontents/sections/Contact';
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -30,6 +31,8 @@ function App() {
       <About />
 
       <Projects />
+
+      <Contact />
 
 
 
