@@ -1,6 +1,27 @@
+import React, { useState } from "react";
 import RevealOnScroll from "../RevealOnScroll";
+import emailjs from "emailjs-com";
 
 export const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: ""
+    });
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, 
+                        import.meta.env.VITE_TEMPLATE_ID, 
+                        e.target, 
+                        import.meta.env.VITE_PUBLIC_KEY).then((result) => {
+            alert("Message Sent!");
+            setFormData({ name: "", email: "", message: "" });
+        }).catch(() =>
+            alert("An error occurred, please try again later."));
+    };
+
     return(
 
         <section 
@@ -13,15 +34,18 @@ export const Contact = () => {
                             Contact Me
                         </h2>
 
-                        <form className="space-y-6">
+                        <form className="space-y-6" onSubmit={handleSubmit}>
+                            <input type="hidden" name="to_name" value="Ashraf" />
                             <div className="relative">
                                 <input 
                                     type="text" 
-                                    id="name" 
-                                    name="name" 
-                                    required 
+                                    id="from_name" 
+                                    name="from_name" 
+                                    required
+                                    value={formData.name}
                                     className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                                    placeholder="Your Name..."    
+                                    placeholder="Your Name..."
+                                    onChange={(e) => setFormData({ ...formData, name: e.target.value })} 
                                 />
                             </div>
                             <div className="relative">
@@ -30,8 +54,10 @@ export const Contact = () => {
                                     id="email" 
                                     name="email" 
                                     required 
+                                    value={formData.email}
                                     className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                                    placeholder="YourEmail@example.com"    
+                                    placeholder="YourEmail@example.com"
+                                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}   
                                 />
                             </div>
                             <div className="relative">
@@ -39,9 +65,11 @@ export const Contact = () => {
                                     id="message" 
                                     name="message" 
                                     required
+                                    value={formData.message}
                                     rows={5}
                                     className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                                    placeholder="Your Message..."    
+                                    placeholder="Your Message..." 
+                                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}   
                                 />
                             </div>
 
