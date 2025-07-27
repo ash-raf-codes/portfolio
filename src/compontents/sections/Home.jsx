@@ -8,13 +8,10 @@ export const Home = () => {
         <RevealOnScroll>
 
         <div className="text-center z-10 px-4">
-            <h1 className="text-5x md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-right">Welcome to my Website, I am Ashraf</h1>
+            <h1 className="text-5x md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-right">Welcome! I am Ashraf</h1>
         
             <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
-           Full-stack software engineer specializing in Python, Java, JavaScript, cloud platforms (AWS, Azure), 
-           and automated testing frameworks. Experienced in microservices architecture, CI/CD pipelines, 
-           containerization, and agile methodologies with proven ability to reduce development lifecycles by 50%. 
-           Passionate about integrating AI/machine learning technologies into enterprise applications and intelligent automation solutions.
+                Full-stack engineer skilled in Python, C/C++, Java, JavaScript, and cloud (AWS, Azure). Expert in microservices, CI/CD, and automation. Passionate about AI-driven solutions.
             </p>
 
             <div className="flex justify-center space-x-4">
